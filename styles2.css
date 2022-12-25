@@ -1,0 +1,164 @@
+.social-login,.socials{display:flex;
+    justify-content: center;
+    align-items: center;
+        gap: 7px;
+    display:-webkit-flex}list-type-ulli,
+.socials{
+    list-style-type:none;
+    margin:0;
+    padding:0}
+@font-face{font-family:poppins;font-style:normal;font-weight:300;src:url(../fonts/poppins/poppins-v5-latin-300.eot)
+}
+.signin-image{
+    margin-left: 99px;
+    
+}
+.form-title{
+    margin-bottom:33px}
+.figure{
+    margin-bottom:50px;
+    text-align:center}
+.form-submit{
+    display:inline-block;
+    background:#6dabe4;
+    color:#fff;border-bottom:none;
+    width:auto;padding:15px 39px;
+    border-radius:5px;-moz-border-radius:5px;
+    -webkit-border-radius:5px;-o-border-radius:5px;-ms-border-radius:5px;
+    margin-top:25px;
+    cursor:pointer}
+.form-submit:hover{
+    background:#4292dc}
+#signin{
+    margin-top:16px}
+.signup-image-link{
+    font-size:14px;
+    color:#222;
+    display:block;
+    text-align:center}
+.term-service{
+    font-size:13px;
+    color:#222}
+.signup-form{
+    margin-left:75px;
+    margin-right:75px;
+    padding-left:34px}
+.register-form{
+    width:100%}
+.form-group{position:relative;
+    margin-bottom:25px;
+    overflow:hidden}
+.form-group:last-child{margin-bottom:0}
+  input{width:100%;
+    display:block;
+    border:none;
+    border-bottom:1px solid #999;
+    padding:6px 30px;
+    font-family:Poppins;
+    box-sizing:border-box}
+    input::-webkit-input-placeholder{color:#999}
+    input::-moz-placeholder{
+        color:#999}
+        input:-ms-input-placeholder{color:#999}
+input:-moz-placeholder{
+    color:#999}
+    input:focus{
+        border-bottom:1px solid #222}
+input:focus::-webkit-input-placeholder{
+    color:#222}
+input:focus::-moz-placeholder{
+    color:#222}
+input:focus:-ms-input-placeholder{
+    color:#222}
+input:focus:-moz-placeholder{
+    color:#222}
+.fa-user{
+    position: relative;
+    top: 30px;
+    left: 5px;
+}
+.fa-lock{
+    position: relative;
+    top: 30px;
+    left: 5px;
+}
+
+.fa-envelope{
+    position: relative;
+    top: 30px;
+    left: 5px;
+}
+label.error{position:relative;
+     background-position-y:3px;
+     padding-left:20px;
+     display:block;
+     margin-top:20px}
+     #remember-me{
+        position: relative;
+        top: 20px;
+     left: -120px;
+     }
+     .agree{ font-size: 11px;
+        position: relative;
+       left: 20px;
+     }
+     span{
+        text-decoration: underline;
+     }
+     label.valid{display:block;
+        position:absolute;
+        right:0;left:auto;
+        margin-top:-6px;
+        width:20px;
+        height:20px;background:0 0}
+        label.valid:after{font-family:material-design-iconic-font;
+            content:'\f269';
+            width:100%;height:100%;
+            position:absolute;
+            font-size:16px;
+            color:green}
+            .label-agree-term{
+                position:relative;
+                top:0%;transform:translateY(0);-moz-transform:translateY(0);-webkit-transform:translateY(0);-o-transform:translateY(0);-ms-transform:translateY(0)}.material-icons-name{font-size:18px}.signin-content{padding-top:67px;padding-bottom:87px}.social-login{align-items:center;-moz-align-items:center;-webkit-align-items:center;-o-align-items:center;-ms-align-items:center;margin-top:80px}
+.social-label{
+    display:inline-block;
+    margin-right:15px}
+    .fa-facebook{
+        background-color:#3b5998;
+        color: white;
+        width: 25px;
+        text-align: center;
+        height: 25px;
+        border-radius: 2px 2px 2px 2px;
+    }
+    .display-flex-center{
+        padding-top: 5px;
+    }
+    .fa-twitter{
+        background-color:#4292dc;
+        color: white;
+        width: 25px;
+        text-align: center;
+        height: 25px;
+        border-radius: 2px 2px 2px 2px;
+    }
+    .fa-google{
+        background-color:#e72734;
+        color: white;
+        width: 25px;
+        text-align: center;
+        height: 25px;
+        border-radius: 2px 2px 2px 2px;
+    }
+    @media screen and (max-width:700px){
+        .signin-image{
+            display: none;
+        }
+  
+    }
+    @media screen and (max-width:600px){
+        .signin-image{
+            display: none;
+        }
+       
+    }
