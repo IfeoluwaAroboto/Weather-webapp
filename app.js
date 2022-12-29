@@ -1,20 +1,11 @@
 function store(e){
-
-  var name = document.getElementById('name').value;
-  var pw = document.getElementById('pw').value;
-  var mail = document.getElementById('mail').value;
-
-   var user = {email: mail,
-    username: name,
-    password: pw,}
-  var json =  JSON.stringify(user);
-  localStorage.setItem(name, json);
   var name2 = document.getElementById('name')
   var password = document.getElementById('pw')
    var mail2 = document.getElementById('mail')
    var pw2 = document.getElementById("pw2");
   if(name2.value.length == 0){
     name2.style.borderColor = "red"
+    
 }
 else if(password.value.length == 0){
   password.style.borderColor = "red"  
@@ -36,22 +27,43 @@ else if (name2.value.length == 0 && password.value.length == 0){
        background: "linear-gradient(to right, #00b09b, #96c93d)",
       }
     }).showToast();
+    var name = document.getElementById('name').value;
+var pw = document.getElementById('pw').value;
+var mail = document.getElementById('mail').value;
+
+ var user = {email: mail,
+  username: name,
+  password: pw,}
+var json =  JSON.stringify(user);
+localStorage.setItem(name, json);
+// localStorage.setItem(name, json);
+allUsers = JSON.parse(localStorage.getItem('users'))
+if(!allUsers){
+  allUsers = []
+}
+allUsers.push(user)
+localStorage.setItem('users', JSON.stringify(allUsers))
+
     setTimeout(function() {
       window.location = "index.html"
     }, 3000); 
 }
 
 }
+ 
+ 
 const date = document.querySelector(".date")
 date.innerHTML =  new Date ().toLocaleDateString() 
 
 function check(){
   var user = document.getElementById('user').value
     var userPw = document.getElementById('userPw').value
-    let existingUser = JSON.parse(localStorage.getItem(user))
+    let existingUser = Object.values(JSON.parse(localStorage.getItem('users')))
 
-    
-    if(user == existingUser.username && userPw == existingUser.password){
+let userDetails = existingUser.find(u => u.username == user && u.password == userPw)
+    localStorage.setItem("activeUser", userDetails);
+
+    if(userDetails){
         Toastify({
             text: "Welcome to Weather Check",
             className: "info",
@@ -76,10 +88,15 @@ function check(){
               
     }
     
+ JSON.stringify(userDetails)
+ for(let key in userDetails){
+  
+ }
 }
-
+ 
 const nameing = document.querySelector(".nameing")
-nameing.innerHTML = "Welcome To Weather Check " 
+const get =  JSON.stringify(localStorage.getItem("activeUser"))
+nameing.innerHTML = "Welcome to Waether Check" 
 
 var input = document.querySelector('.input')
 var btn = document.querySelector('.btn');
@@ -89,7 +106,21 @@ var temp = document.querySelector('.temp')
 var main = document.querySelector('#main')
 var wind = document.querySelector('wind')
 apikey = "66a50a1215fdbe9bba268368d1acb534"
+fetch('https://api.openweathermap.org/data/2.5/weather?q='+'Lagos'+'&appid='+apikey)
+.then(res => res.json())
 
+.then(data => {
+
+    var nameval = data['name']
+    var descrip = data['weather']['0']['main']
+    var tempature = data['main']['temp']
+    var wndspd = data['wind']['speed']
+
+
+    city.innerHTML=`${nameval}`
+    temp.innerHTML = `Temperature: <span>${ (tempature)} °</span>`
+    degree.innerHTML = `Sky: <span>${descrip}<span>`
+    wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`})
 btn.addEventListener('click', function(e){  
   event.preventDefault()
  
@@ -114,5 +145,6 @@ btn.addEventListener('click', function(e){
             alert("You didn't select a city")
           }
           else{
-    main.style.display= "block"}
+   }
       })
+    
