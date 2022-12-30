@@ -6,6 +6,11 @@
     .illustartion{
         display: none;
     }
+.link2{
+display: block;}
+.link{
+display: none;}
+
 }
 
 h1{
@@ -71,6 +76,8 @@ h1{
     color:#8C918F;
 
 }
+.link2{
+display: none;} 
 *{
   box-sizing:border-box;
   -moz-box-sizing:border-box;
