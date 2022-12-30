@@ -7,7 +7,7 @@
         display: none;
     }
 .link2{
-}
+display: block;} 
 .link{
 display: none;}
 
@@ -77,7 +77,7 @@ h1{
 
 }
 .link2{
-display: none;} 
+display:block;} 
 *{
   box-sizing:border-box;
   -moz-box-sizing:border-box;
