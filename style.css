@@ -7,7 +7,17 @@
         display: none;
     }
 .link2{
-display: block;} 
+display: block;
+
+text-decoration:none;
+  color:#C6C6C6;
+  float:right;
+  font-size:12px;
+  margin-bottom:15px;
+    text-decoration: underline;
+    color:#8C918F;
+
+} 
 .link{
 display: none;}
 
