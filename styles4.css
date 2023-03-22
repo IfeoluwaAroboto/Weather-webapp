@@ -1,99 +1,346 @@
-body { background: url("https://source.unsplash.com/featured/1600x900?rain");
-    background-size: cover;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background-color: linear-gradiet(300deg, #757b87, #909d9d);
-    
+body{
+  margin: 20px;
+  
 }
-.intro{ display: block;  
- background-color:rgba(252, 252, 252, 0.4);
- color: black;
- box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
- margin: 9px;
-    text-transform: uppercase;
-    width: 300px;
-    height: 110px;
-    border-radius: 0 15px 15px 0;
-   padding: 18px;
+
+.sidenav {
+    height: 100%; 
+    width: 200px; 
+    position: fixed;
+    z-index: 1;
+    top: 0; 
+    left: 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color:white;
+    overflow-x: hidden; 
+    padding-top: 20px;
+  }
+  #logout{
+    padding-top:220px;
+  }
+  .wcheck{
+    padding: 6px 8px 6px 16px;
+  }
+#search{
+  width: 700px;
+  height: 50px;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid gray;
+  border-radius: 20px 20px 20px 20px;
 }
-#main{ 
-    border-radius: 25px;
-       width: 300px;
-    height: 190px;
-    text-align: center;
-    background-color:rgba(252, 252, 252, 0.7);
-    color: black;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.input{
+  padding-top: 90px;
+}
+.btn{ font-size: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color:white;
+  width: 80px;
+  height: 50px;
+  margin: 20px;
+  border: none;
+}
+
+.bell{
+  font-size: 20px;
+  background-color:white;
+  border: none;
 }
 .main-body{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0%;
+}
+#mainn{display: flex;
+gap:16px}
+.icon{ text-align:center ;
+  display: flex;
+}
+.fa-map-marker{
+  font-size: 30px;
+  margin: 16px;
+}
+  .sidenav a {
+    padding: 6px 8px 6px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    padding-top: 40px;
+    display: block;
+  }
+  .main{
  
-}
-#form{
+      margin-left: 250px;
+      padding: 0px 10px;
+    display:flex;
+  }
+  #main{ 
+    background: url(./Images/cloding.avif) ;
+    background-size: cover;
+    min-width: 300px;
+    max-width: 820px;
+    border-radius: 12px 12px 12px 12px;
+    padding:  15px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 20px;
+    color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height:25vh;
-    margin: 0;
-    flex-direction: row;
+  }
+  .time{
+    display: flex;
+    justify-content: space-around;
+align-items: center; }
+.border{
+  border: 2px solid white;
+  display: flex;
 }
-input {
-    padding: 1rem;
-    border-radius: 25px;
-    border: none;
-    background-color: #fff;
-    font-family: inherit;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 350px;
-    font-size: 1rem;
-}
-.btn{    font-family: "Poppins", sans-serif;
-
-    padding: 1rem;
-    border-radius: 25px;
-    border: none;
-    background-color: #fff;
-    font-family: inherit;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 120px;
-    font-size: 1rem;
-}
-input:focus {
-    outline: none;
-}
-.weather {
+  .sub-main{
+    
+  }
+  .body{ background: url(./Images/cloding.avif) ;
+    background-size: cover;  
+  margin-left: 250px;
+    min-width: 500px;
+   max-width: 820px;
+   border-radius: 12px 12px 12px 12px;
+    padding:  15px 10px;
+    height: 230px;
+    display: flex;
+    gap: 20px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+  }
+  .temp{
+    background-color: rgba(255, 255, 255, 0.3);
     text-align: center;
-    font-size: 2rem;
+    border-radius: 12px 12px 12px 12px;
+    width: 380px;
+  }
+#sub-des{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.weather h2 {
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
+.grid{
+  margin-left: 250px;
+  padding: 0px 10px;
+}
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-width: 1167px) {
+    
+#search{
+  width: 500px;
+  height: 50px;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid gray;
+  border-radius: 20px 20px 20px 20px;
+}
+.input{
+  padding-top: 90px;
+}
+.btn{ font-size: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color:white;
+  width: 60px;
+  height: 50px;
+  margin: 15px;
+  border: none;
 }
 
-@media screen and (max-width: 800px) {
+.bell{
+  font-size: 20px;
+  background-color:white;
+  border: none;
+}
 
-input {
-    padding: 1rem;
-    border-radius: 25px;
-    border: none;
-    background-color: #fff;
-    font-family: inherit;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 180px;
-    font-size: 1rem;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;display: none;}
+    .sidenav a {font-size: 18px;}
+  }
+  @media screen and (max-width: 950px) {
+    .sidenav {display: none;}
+    .main{
+  
+      margin-left: 0px;
+      padding: 0px 10px;
+    
+  }
+     
+#search{
+  width: 600px;
+  height: 50px;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid gray;
+  border-radius: 20px 20px 20px 20px;
 }
-.btn{    font-family: "Poppins", sans-serif;
+.input{
+  padding-top: 90px;
+}
+.btn{ font-size: 20px;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color:white;
+  width: 65px;
+  height: 50px;
+  margin: 15px;
+  border: none;
+}
 
-    padding: 1rem;
-    border-radius: 25px;
-    border: none;
-    background-color: #fff;
-    font-family: inherit;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 80px;
-    font-size: 1rem;
+.bell{
+  font-size: 25px;
+  background-color:white;
+  border: none;
 }
+.body{ background: url(./Images/cloding.avif) ;
+  background-size: cover;  
+  min-width: 500px;
+ max-width: 820px;
+ border-radius: 12px 12px 12px 12px;
+  height: 230px;
+  display: flex;
+  margin-left: 0px;
+  gap: 20px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
 }
+.grid{
+  margin-left:0px;
+}
+#main{ 
+  background: url(./Images/cloding.avif) ;
+  background-size: cover;
+  min-width: 500px;
+  max-width: 820px;
+  border-radius: 12px 12px 12px 12px;
+  padding:  15px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+gap: 20px;
+
+  color: white;
+  display: flex;
+}
+  }
+  
+  @media screen and (max-width: 750px) {
+    
+    #search{
+      width: 380px;
+      height: 50px;
+      padding: 20px;
+      font-size: 20px;
+      border: none;
+      border-bottom: 2px solid gray;
+      border-radius: 20px 20px 20px 20px;
+    }
+    .input{
+      padding-top: 90px;
+    }
+    .btn{ font-size: 15px;
+      border-radius: 20px 20px 20px 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color:white;
+      width: 40px;
+      height: 50px;
+      margin: 10px;
+      border: none;
+    }
+    
+    .bell{
+      font-size: 15px;
+      background-color:white;
+      border: none;
+    }
+
+  }
+  @media screen and (max-width: 690px) {
+    .body{ background: url(./Images/cloding.avif) ;
+      background-size: cover;  
+      margin-left: 0px;
+      min-width: 400px;
+     max-width: 820px;
+     border-radius: 12px 12px 12px 12px;
+    justify-content: center;
+     align-items: center;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+    }
+    #sub-des{ 
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 80px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+  
+    #search{
+      width: 300px;
+      height: 50px;
+      padding: 20px;
+      font-size: 20px;
+      border: none;
+      border-bottom: 2px solid gray;
+      border-radius: 20px 20px 20px 20px;
+    }
+  
+         .input{
+      padding-top: 90px;
+    }
+    .btn{ font-size: 15px;;
+      border-radius: 20px 20px 20px 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color:white;
+      width: 40px;
+      height: 50px;
+      margin: 10px;
+      border: none;
+    }
+      .bell{
+        font-size: 15px;
+        background-color:white;
+        border: none;
+      }
+  }
+  
+  @media screen and (max-width: 440px) {
+  
+    #search{
+      width: 230px;
+      height: 50px;
+      padding: 20px;
+      font-size: 20px;
+      border: none;
+      border-bottom: 2px solid gray;
+      border-radius: 20px 20px 20px 20px;
+    }
+  
+         .input{
+      padding-top: 90px;
+    }
+    .btn{ font-size: 15px;
+      border-radius: 20px 20px 20px 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color:white;
+      width: 40px;
+      height: 50px;
+      margin: 10px;
+      border: none;
+    }
+      .bell{
+        font-size: 15px;
+        background-color:white;
+        border: none;
+      }
+  }

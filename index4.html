@@ -3,25 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="styles4.css">
     <title>Weather</title>
 </head>
 <body>
+        <!-- Side navigation -->
+<div class="sidenav">
+    <h3 class="wcheck"> <i class="fa fa-sun-o" aria-hidden="true" style="display: flex; gap: 12px; text-decoration: solid;">WCheck </i></h3> 
+    <a href="#"> <i class="fa fa-tachometer" aria-hidden="true" style="display: flex; gap: 12px; text-decoration: solid;">Dashboard</i></a>
+    <a href="#">  <i class="fa fa-map-o"  aria-hidden="true" style="display: flex; gap: 12px; color:gray">Map </i> </a>
+    <a href="#"> <i class="fa fa-map-pin" aria-hidden="true" style="display: flex; gap: 12px; color:gray">Saved Location </i></a>
+    <a href="#"><i class="fa fa-calendar-o" aria-hidden="true"  style="display: flex; gap: 12px; color:gray">Calendar </i></a>
+    <a href="#"><i class="fa fa-cog" aria-hidden="true" style="display: flex; gap: 12px; color:gray">Settings </i> </a>
+    <a href="#"  onclick ="logOut()" id="logout"> <i class="fa fa-sign-out" aria-hidden="true" style="display: flex; gap: 12px; color:gray">Logout </i> </a>
+  </div>
+<div class="main">
     <div class="intro">
-    <h2 class="nameing"></h2> 
-    <h3 class="date"></h3>
+
 </div>
      <form id="form">
-        <input type="text" class = "input" id="search" placeholder="Search By Location" autocomplete="off">
-        <button class="btn"> Search</button>
+      
+        <input type="search" class = "input" id="search" placeholder="Search By Location" autocomplete="off">
+        <button class="btn">  <i class="fa fa-search" aria-hidden="true"></i></button>
+       <button class="bell"> <i class="fa fa-bell" aria-hidden="true"></i> </button>
+   
     </form>
-    <div class="main-body">
-    <div id="main">
-<h1 class="location"> </h1>
-<h2 class="degree"></h2>  
-<h2 class="temp"></h2> 
-<div class="wind"></div> </div> </div>
+</div>
+<div class="body">
+ <div class="main-body ">
+    <div id="mainn" >
+        <div class="icon" >
+        <i class="fa fa-map-marker" aria-hidden="true">  </i>  <h3 class="city"> </h3> </div>
+    <h3 class="day"></h3>
+    </div>
+    <div id="sub-des">
+<h1 class="temprature" ></h1>
+<h4 class="wind" style= "text-transform: uppercase;"></h4>
+<p class="humidity" style="display: none;"></p> </div>
+</div>
+<div class="sub-main">
+<div class="temp" >
+<h4> Temprature</h4>
+  <img src="" alt="" class="img">
+  <div class="timee" style="text-align: center;">
+  <h3 style="padding-top: 20px; padding-bottom: 20px;"> Tempratures for the day</h3>
+  </div>
+  <div class="time">
+    <h4 class="day-one"> 350.4°</h4>
+    <h4 class="day-two"> 254.5° </h4>
+    <h4 class="day-three"> 432.4°</h4>
+    <h4 class ="day-four"> 270.7° </h4>
+  </div> 
+</div> 
+</div>
+ </div>
+ <div class="grid" style="visibility: hidden;">
+    
+ <div class="main-body" >
+   <h4> Next Five Days</h4> 
+   <h4 class="day-2"></h4>
+    <div id="main" class = "row" >
+    <div id="Morning" class="col-6 col-md-4"  style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+        <h4 class="des"> </h4>     
+        <img src="" alt="" class="img-2">
+<h4 class="temprature-2"></h4> </div>
+<div id="Afternoon"class="col-6 col-md-4"  style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+    <h4 class="des2"></h4>     
+    <img src="" alt="" class="img-3a">
+<h4 class="temprature-af"></h4> </div>
+<div id="mid-ng" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des3"></h4>  
+    <img src="" alt="" class="img-2a">
+<h4 class="temprature-ev"></h4>
+</div>
+<div id="mid-ng"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des4"></h4>  
+    <img src="" alt="" class="img-4a">
+<h4 class="temprature-ng"></h4> </div>
+<div id="mid-ng" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;" >
+    <h4 class="des5"></h4>  
+    <img src="" alt="" class="img-mid">
+<h4 class="temprature-mid"></h4>
+
+ </div> </div>
+
+ <div class="main-body">  
+    <h4 class="day-3"></h4>
+    <div id="main"class="row" >
+
+<div id="Morning"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+    <h4 class="des6"></h4>  
+    <img src="" alt="" class="img-3">
+    <h4 class="temprature-3"></h4> </div>
+<div id="Afternoon"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+    <h4 class="des7"></h4>  
+<img src="" alt="" class="img-3b">
+<h4 class="temprature-after"></h4> </div>
+<div id="evening"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des8"></h4>  
+<img src="" alt="" class="img-4b">
+<h4 class="temprature-eve"></h4>
+</div>
+<div id="Night"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des9"></h4>  
+<img src="" alt="" class="img-5b">
+<h4 class="temprature-nig"></h4> </div>
+<div id="mid-nig" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des10"></h4>  
+    <img src="" alt="" class="img-midn">
+<h4 class="temprature-midn"></h4>
+</div>
+ </div> </div>
+ <div class="main-body">
+    <h4 class="day-4"></h4>
+    <div id="main"class="row" >
+        <div id="Morning" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+            <h4 class="des11"></h4>
+            <img src="" alt="" class="img-6a">
+<h4 class="temprature-4"></h4> </div>
+<div id="Afternoon" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+    <h4 class="des12"></h4>
+<img src="" alt="" class="img-6b">
+<h4 class="temprature-aftern"></h4> </div>
+<div id="evening" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des13"></h4>
+<img src="" alt="" class="img-7b">
+<h4 class="temprature-evei"></h4> 
+</div>
+<div id="Night" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des14"></h4>
+<img src="" alt="" class="img-8b">
+<h4 class="temprature-nigh"></h4> </div>
+<div id="mid-nigi" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+    <h4 class="des15"></h4>  
+    <img src="" alt="" class="img-midni">
+<h4 class="temprature-midni"></h4>
+</div>
+ </div>
+ <div class="main-body" >
+    <h4 class="day-5"></h4>
+    <div id="main"class="row">
+    <div id="Morning"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+        <h4 class="des16"></h4>  
+        <img src="" alt="" class="img-9a">
+<h4 class="temprature-5"></h4> </div>
+<div id="Afternoon" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+    <h4 class="des17"></h4>  
+    <img src="" alt="" class="img-9b">
+    <h4 class="temprature-afterno"></h4> </div>
+    <div id="evening" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+        <h4 class="des18"></h4>  
+    <img src="" alt="" class="img-9c">
+    <h4 class="temprature-even"></h4> 
+    </div>
+    <div id="Night"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+        <h4 class="des19"></h4>  
+    <img src="" alt="" class="img-9d">
+    <h4 class="temprature-night"></h4> </div>
+    <div id="mid-nigih" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+        <h4 class="des20"></h4>  
+        <img src="" alt="" class="img-midnig">
+    <h4 class="temprature-midnig"></h4>
+    </div>
+</div>
+ </div>
+ <div class="main-body">
+    <h4 class="day-6"></h4>
+    <div id="main"class="row">
+        <div id="Morning" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+            <h4 class="des21"></h4>  
+            <img src="" alt="" class="img-9g">
+<h4 class="temprature-6"></h4>
+</div>
+<div id="Afternoon" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;"> 
+    <h4 class="des22"></h4>    
+    <img src="" alt="" class="img-9e">
+    <h4 class="temprature-afternoon"></h4> </div>
+    <div id="evening"  class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+        <h4 class="des23"></h4>  
+    <img src="" alt="" class="img-9f">
+    <h4 class="temprature-evening"></h4> 
+    </div>
+    <div id="Night" class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+        <h4 class="des24"></h4>  
+    <img src="" alt="" class="img-9g">
+    <h4 class="tempraturenight" ></h4> </div>
+    <div id="mid-nigiht"class="col-6 col-md-4" style = "border: 2px solid white;text-align: center;width: 140px; border-radius: 9px 9px 9px 9px;">
+        <h4 class="des25"></h4>  
+        <img src="" alt="" class="img-midnigh">
+    <h4 class="temprature-midnigh"></h4>
+    </div>
+ </div> </div>
+</body>
     <script src="app.js"></script>
+    <script src="register.js"></script>
 </body>
 </html>
