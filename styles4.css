@@ -94,9 +94,7 @@ align-items: center; }
   border: 2px solid white;
   display: flex;
 }
-  .sub-main{
-    
-  }
+ 
   .body{ background: url(./Images/cloding.avif) ;
     background-size: cover;  
   margin-left: 250px;
