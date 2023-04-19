@@ -95,7 +95,7 @@ align-items: center; }
   display: flex;
 }
  
-  .body{ background: url(../Images/cloudy.avif)  ;
+  .body{ background: url(./Images/weather-bg.jpg)  ;
     background-size: cover;  
   margin-left: 250px;
     min-width: 500px;
