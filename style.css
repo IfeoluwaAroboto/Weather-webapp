@@ -8,7 +8,6 @@
     }
 .link2{
 display: block;
-
 text-decoration:none;
   color:#C6C6C6;
   float:right;
@@ -17,10 +16,16 @@ text-decoration:none;
     text-decoration: underline;
     color:#8C918F;
 
+}
+.con{
+  padding: 0;
+}
+.box{ 
+  padding: 0px;
+ 
 } 
 .link{
 display: none;}
-
 }
 
 h1{
