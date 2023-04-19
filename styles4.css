@@ -95,7 +95,8 @@ align-items: center; }
   display: flex;
 }
  
-  .body{ 
+  .body{ background: url(../Images/cloudy.avif)  ;
+    background-size: cover;  
   margin-left: 250px;
     min-width: 500px;
    max-width: 820px;
